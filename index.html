@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="styles.css">
+	<script src="scripts.js"></script>
+</head>
+
+<body>
+	<h1>Sprzątanie świata 2021 - Gra</h1>
+	<p>Złap jak najwięcej śmieci do kosza! Pamiętaj tylko o poprawnym recyklingu odpadów!</p>
+	<p>Steruj koszem używając myszki, a przełączaj pomiędzy kolorami używając klawiszy <kbd>q</kbd> , <kbd>w</kbd> oraz
+		<kbd>e</kbd>
+	</p>
+	<p id="lives">Życia: <b>10</b></p>
+	<p id="score">Wynik: <b>0</b></p>
+	<button id="start" onclick='startGame()'>Start</button>
+	<canvas id="gameCanvas" width="800" height="600"></canvas>
+	<div id="game-contols">
+		<div id="image-container">
+			<img id="blue-bin" src="img/bluebin.png" onclick="updateBinImage(' blue-bin', 0)">
+			<img id="yellow-bin" src="img/yellowbin.png" onclick="updateBinImage('yellow-bin', 1)">
+			<img id="green-bin" src="img/greenbin.png" onclick="updateBinImage('green-bin', 2)">
+		</div>
+		<div id="image-container">
+			<img id="paper" src="img/paper.png">
+			<img id="plastic" src="img/plastic.png">
+			<img id="glass" src="img/glass.png">
+		</div>
+	</div>
+</body>
+
+</html>

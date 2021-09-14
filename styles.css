@@ -1,0 +1,35 @@
+h1, p {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-align: center;
+}
+
+p {
+	margin: 1px;
+}
+
+button {
+	margin: auto;
+	display: block;
+	padding: 3px;
+	font-size: 1.2em;
+	margin-bottom: 10px;
+}
+
+canvas {
+	margin: auto;
+	display: block;
+    border: 1px solid #d3d3d3;
+    background-color: #f1f1f1;
+}
+#game-contols {
+	margin-top: 10px;
+	width: 100%;
+}
+
+#image-container {
+	width: 460px;
+	margin: auto;
+}
+#image-container img { 
+	width: 150px;
+}
