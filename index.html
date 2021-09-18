@@ -8,7 +8,7 @@
 	<title>Document</title>
 
 	<link rel="stylesheet" href="styles.css">
-	<script src="scripts.js"></script>
+	<script src="scripts.js" defer></script>
 </head>
 
 <body>
@@ -17,9 +17,31 @@
 	<p>Steruj koszem używając myszki, a przełączaj pomiędzy kolorami używając klawiszy <kbd>q</kbd> , <kbd>w</kbd> oraz
 		<kbd>e</kbd>
 	</p>
-	<p id="lives">Życia: <b>10</b></p>
-	<p id="score">Wynik: <b>0</b></p>
-	<button id="start" onclick='startGame()'>Start</button>
+
+	<div id="grid2">
+		<div class="cell">
+			<button id="start" onclick='startGame()'>Start</button>
+		</div>
+
+		<div class="cell">
+			<p id="score">
+				Wynik: <b>0</b>
+			</p>
+		</div>
+	</div>
+
+	<p id="lives">
+		<img class="lives" src="img/earth.png" alt="Lives" width="30" height="30">
+		<img class="lives" src="img/earth.png" alt="Lives" width="30" height="30">
+		<img class="lives" src="img/earth.png" alt="Lives" width="30" height="30">
+		<img class="lives" src="img/earth.png" alt="Lives" width="30" height="30">
+		<img class="lives" src="img/earth.png" alt="Lives" width="30" height="30">
+		<img class="lives" src="img/earth.png" alt="Lives" width="30" height="30">
+		<img class="lives" src="img/earth.png" alt="Lives" width="30" height="30">
+		<img class="lives" src="img/earth.png" alt="Lives" width="30" height="30">
+		<img class="lives" src="img/earth.png" alt="Lives" width="30" height="30">
+		<img class="lives" src="img/earth.png" alt="Lives" width="30" height="30">
+	</p>
 	<canvas id="gameCanvas" width="800" height="600"></canvas>
 	<div id="game-contols">
 		<div id="image-container">

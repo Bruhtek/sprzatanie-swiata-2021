@@ -12,6 +12,8 @@ let livesP;
 
 let fallInterval = 200;
 
+document.getElementById("lives").style.left = (document.getElementsByTagName("body")[0].clientWidth - 802) / 2 - 30 + "px";
+
 var game = {
 	canvas: document.getElementById("gameCanvas"),
 	key: false,
@@ -31,11 +33,11 @@ var game = {
 		{
 			console.log(e.key);
 			game.key = e.key;
-		})
+		});
 		window.addEventListener('keyup', function (e)
 		{
 			game.key = false;
-		})
+		});
 	},
 	restart: function ()
 	{
@@ -151,6 +153,7 @@ function summonTrash()
 			break;
 	}
 }
+
 function updateGame()
 {
 	switch (game.key)
@@ -200,7 +203,20 @@ function updateGame()
 		trashItems[i].update();
 	}
 
-	livesP.innerHTML = "Życia: <b>" + lives + "</b>";
+	let livesText = ""
+	for (let i = 0; i < 10; i++)
+	{
+		if (i < lives)
+		{
+			livesText += '<img class="lives" src="img/earth.png" alt="V" width="30" height="30">';
+		}
+		else
+		{
+			livesText += '<img class="lives" src="img/earth-dead.png" alt="X" width="30" height="30">';
+		}
+	}
+
+	livesP.innerHTML = livesText;
 	scoreP.innerHTML = "Wynik: <b>" + score + "</b>";
 
 	if (lives <= 0)
@@ -212,6 +228,8 @@ function updateGame()
 		game.context.fillText("Koniec gry!", game.canvas.width / 2 - 80, game.canvas.height / 2);
 		game.context.fillText("Twój wynik to: " + score, game.canvas.width / 2 - 80, game.canvas.height / 2 + 30);
 	}
+
+	document.getElementById("lives").style.left = (document.getElementsByTagName("body")[0].clientWidth - 802) / 2 - 30 + "px";
 
 	bin.update();
 }
